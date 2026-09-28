@@ -7,6 +7,7 @@ export default defineConfig({
     registerType: 'autoUpdate',
       devOptions: { enabled: false },
       workbox: {
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // Naikkan batas precache jadi 10 MB
         globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3,ttf}']
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
